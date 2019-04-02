@@ -15,11 +15,19 @@
 <script>
 export default {
   props: {
-    food: Object
+    food: Object,
+    icon: String
   },
-
   methods: {
     updateFoodCount(isAdd) {
+      const position = this.$el.getBoundingClientRect()
+      if (this.icon && isAdd) {
+        this.$bus.$emit("addFlyBall", {
+          icon: this.icon,
+          startX: position.left,
+          startY: position.top
+        });
+      }
       this.$store.dispatch("updateFoodCount", { isAdd, food: this.food });
     }
   }
@@ -35,15 +43,15 @@ export default {
   .cart-decrease
     display inline-block
     padding 6px
-    line-height 24px
-    font-size 24px
+    line-height 20px
+    font-size 20px
     color rgb(0, 160, 220)
 
   .icon-remove_circle_outline
     display inline-block
     padding 6px
-    line-height 24px
-    font-size 24px
+    line-height 20px
+    font-size 20px
     color $green
 
     &.move-enter-active, &.move-leave-active
@@ -57,7 +65,7 @@ export default {
     display inline-block
     vertical-align top
     width 12px
-    padding-top 6px
+    padding-top 4px
     line-height 24px
     text-align center
     font-size 10px
@@ -66,7 +74,7 @@ export default {
   .icon-add_circle
     display inline-block
     padding 6px
-    line-height 24px
-    font-size 24px
+    line-height 20px
+    font-size 20px
     color $green
 </style>

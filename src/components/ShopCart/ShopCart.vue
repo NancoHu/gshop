@@ -39,6 +39,8 @@
       </transition>
     </div>
     <div class="list-mask" v-show="listShow" @click="toggleShow"></div>
+
+    <FlyBall/>
   </div>
 </template>
 
@@ -47,6 +49,7 @@ import { MessageBox } from "mint-ui";
 import BScroll from "better-scroll";
 import { mapState, mapGetters } from "vuex";
 import CartControl from "../CartControl/CartControl.vue";
+import FlyBall from "../FlyBall/FlyBall.vue";
 
 export default {
   data() {
@@ -118,7 +121,8 @@ export default {
     }
   },
   components: {
-    CartControl
+    CartControl,
+    FlyBall
   }
 };
 </script>
