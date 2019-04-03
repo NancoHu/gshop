@@ -2,7 +2,7 @@
   <section class="profile">
     <HeaderTop title="我的"/>
     <section class="profile-number">
-      <router-link :to="userInfo._id ? '/userinfo': '/login'" class="profile-link">
+      <router-link :to="userInfo._id ? '/user': '/login'" class="profile-link">
         <div class="profile_image">
           <i class="iconfont icon-person"></i>
         </div>
@@ -118,7 +118,7 @@ export default {
           Toast("登出完成");
         },
         action => {
-          console.log("点击了取消");
+          // 点击了取消
         }
       );
     }
@@ -184,7 +184,7 @@ export default {
         color #fff
 
   .profile-number
-    margin-top 45.5px
+    margin-top 45px
 
     .profile-link
       clearFix()
@@ -301,6 +301,7 @@ export default {
       display flex
       align-items center
       padding-left 15px
+      border-bottom 1px solid #f1f1f1
 
       >span
         display flex
@@ -326,7 +327,6 @@ export default {
 
       .my_order_div
         width 100%
-        border-bottom 1px solid #f1f1f1
         padding 18px 10px 18px 0
         font-size 16px
         color #333

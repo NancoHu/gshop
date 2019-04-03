@@ -47,6 +47,9 @@ export default new Router({
     {
       path: '/shop',
       component: () => import('../pages/Shop/Shop.vue'),
+      meta: {
+        showFooter: false
+      },
       children: [
         {
           path: '/shop/goods',
@@ -65,6 +68,12 @@ export default new Router({
           redirect: '/shop/goods'
         },
       ]
+    },{
+      path: '/user',
+      component: () => import('../pages/User/User.vue'),
+      meta: {
+        showFooter: false
+      }
     }
   ]
 })
