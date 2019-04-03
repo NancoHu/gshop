@@ -1,30 +1,23 @@
 # gshop
 
-> 商城项目
+> 移动端仿照“饿了吗”外卖项目
 
-## Build Setup
+## 项目技术点
+vue全家桶，mint-ui，swiper，better-scroll，axios，stylus.
+
+## 指令
 
 ``` bash
-# install dependencies
+# 下载依赖
 npm install
 
-# serve with hot reload at localhost:8080
-npm run dev
+# 调试项目，[地址：](http://localhost:10010)
+npm start
 
-# build for production with minification
+# 打包项目
 npm run build
 
-# build for production and view the bundle analyzer report
-npm run build --report
-
-# run unit tests
-npm run unit
-
-# run e2e tests
-npm run e2e
-
-# run all tests
-npm test
 ```
 
-For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+## 项目预览地址
+[](http://106.13.3.24:3020/)
