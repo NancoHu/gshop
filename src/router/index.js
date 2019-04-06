@@ -15,6 +15,7 @@ const ShopInfo = () => import('../pages/Shop/ShopInfo/ShopInfo.vue')
 import User from '../pages/User/User.vue'
 
 export default new Router({
+  mode: 'history',
   routes: [
     {
       path: '/',
