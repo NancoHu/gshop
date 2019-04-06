@@ -3,6 +3,17 @@ import Router from 'vue-router'
 
 Vue.use(Router)
 
+const MSite = () => import('../pages/Msite/Msite.vue')
+const Search = () => import('../pages/Search/Search.vue')
+const Order = () => import('../pages/Order/Order.vue')
+const Profile = () => import('../pages/Profile/Profile.vue')
+const Login = () => import('../pages/Login/Login.vue')
+const Shop = () => import('../pages/Shop/Shop.vue')
+const ShopGoods = () => import('../pages/Shop/ShopGoods/ShopGoods.vue')
+const ShopRatings = () => import('../pages/Shop/ShopRatings/ShopRatings.vue')
+const ShopInfo = () => import('../pages/Shop/ShopInfo/ShopInfo.vue')
+import User from '../pages/User/User.vue'
+
 export default new Router({
   routes: [
     {
@@ -11,66 +22,66 @@ export default new Router({
     },
     {
       path: '/msite',
-      component: () => import('../pages/Msite/Msite.vue'),
+      component: MSite,
       meta: {
         showFooter: true
       }
     },
     {
       path: '/search',
-      component: () => import('../pages/Search/Search.vue'),
+      component: Search,
       meta: {
         showFooter: true
       }
     },
     {
       path: '/order',
-      component: () => import('../pages/Order/Order.vue'),
+      component: Order,
       meta: {
         showFooter: true
       }
     },
     {
       path: '/profile',
-      component: () => import('../pages/Profile/Profile.vue'),
+      component: Profile,
       meta: {
         showFooter: true
       }
     },
     {
       path: '/login',
-      component: () => import('../pages/Login/Login.vue'),
+      component: Login,
       meta: {
         showFooter: false
       }
     },
     {
       path: '/shop',
-      component: () => import('../pages/Shop/Shop.vue'),
+      component: Shop,
       meta: {
         showFooter: false
       },
       children: [
         {
           path: '/shop/goods',
-          component: () => import('../pages/Shop/ShopGoods/ShopGoods.vue'),
+          component: ShopGoods,
         },
         {
           path: '/shop/ratings',
-          component: () => import('../pages/Shop/ShopRatings/ShopRatings.vue'),
+          component: ShopRatings,
         },
         {
           path: '/shop/info',
-          component: () => import('../pages/Shop/ShopInfo/ShopInfo.vue'),
+          component: ShopInfo,
         },
         {
           path: '',
           redirect: '/shop/goods'
         },
       ]
-    },{
+    }, {
       path: '/user',
-      component: () => import('../pages/User/User.vue'),
+      component: User,
       meta: {
         showFooter: false
       }

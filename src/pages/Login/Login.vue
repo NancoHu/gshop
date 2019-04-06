@@ -69,7 +69,7 @@
                   placeholder="验证码"
                   v-model="captcha"
                 >
-                <img class="get_captcha" alt="captcha" ref="captcha" v-cloak>
+                <img class="get_captcha" alt="图形验证码" ref="captcha" v-cloak>
                 <span class="captcha_again" @click="getCaptcha" v-cloak>换一张</span>
               </section>
             </section>

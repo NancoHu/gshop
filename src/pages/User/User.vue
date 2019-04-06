@@ -88,7 +88,7 @@ export default {
       );
     }
   },
-  mounted() {
+  updated() {
     if (!this.userInfo._id) this.$router.replace("./login");
   }
 };
