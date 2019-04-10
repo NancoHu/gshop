@@ -85,8 +85,8 @@ export default {
     myAddressDistrict(oldval, newval) {}
   },
   methods: {
-    setSelectShow(v){
-      this.$emit("setSelectShow",v);
+    setSelectShow(v) {
+      this.$emit("setSelectShow", v);
     },
     closeSelect() {
       this.$emit("closeSelect");
@@ -134,8 +134,10 @@ export default {
       this.myAddressCity = values[2];
       this.myAddressDistrict = values[4];
 
-      this.district =
-        this.myAddressPrivince + this.myAddressCity + this.myAddressDistrict;
+      this.district = "";
+      if (this.myAddressPrivince) this.district += this.myAddressPrivince;
+      if (this.myAddressCity) this.district += this.myAddressCity;
+      if (this.myAddressDistrict) this.district += this.myAddressDistrict;
     }
   },
   mounted() {
