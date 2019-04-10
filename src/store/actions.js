@@ -30,8 +30,19 @@ import {
 import session from '../session'
 
 export default {
+  // 更新用户地址
+  updateAddress({ commit }, newAddress) {
+    session.setItem('address', newAddress)
+    commit(RECEIVE_ADDRESS, { address: newAddress })
+  },
+
   // 异步获取地址
   async getAddress({ commit, state }) {
+    const address = session.getItem('address')
+    if (address && address.name) {
+      commit(RECEIVE_ADDRESS, { address })
+      return address
+    }
     // 发送异步ajax请求
     const geohash = state.latitude + ',' + state.longitude
     const result = await reqAddress(geohash)
@@ -39,7 +50,9 @@ export default {
     if (result.code === 0) {
       const address = result.data
       commit(RECEIVE_ADDRESS, { address })
+      return address
     }
+    return null
   },
 
   // 异步获取食品分类列表

@@ -3,6 +3,7 @@ import Router from 'vue-router'
 
 Vue.use(Router)
 
+const Address = () => import('../pages/Address/Address.vue')
 const MSite = () => import('../pages/Msite/Msite.vue')
 const Search = () => import('../pages/Search/Search.vue')
 const Order = () => import('../pages/Order/Order.vue')
@@ -17,6 +18,13 @@ import User from '../pages/User/User.vue'
 export default new Router({
   mode: 'history',
   routes: [
+    {
+      path: '/address',
+      component: Address,
+      meta: {
+        showFooter: false
+      }
+    },
     {
       path: '/',
       redirect: '/msite'

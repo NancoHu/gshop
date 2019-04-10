@@ -9,16 +9,19 @@ Mock.setup({
 })
 
 // 用户所在地址
+// Mock.mock(/api\/position\/\w+/, {
+//     "code": 0,
+//     "data": {
+//         "address": "深圳市南山区",
+//         "city": "深圳市",
+//         "geohash": "40.10038,116.36867",
+//         "latitude": "40.10038",
+//         "longitude": "116.36867",
+//         "name": "深圳市南山区"
+//     }
+// })
 Mock.mock(/api\/position\/\w+/, {
-    "code": 0,
-    "data": {
-        "address": "深圳市南山区",
-        "city": "深圳市",
-        "geohash": "40.10038,116.36867",
-        "latitude": "40.10038",
-        "longitude": "116.36867",
-        "name": "深圳市南山区"
-    }
+    "code": 1
 })
 
 // 用户信息

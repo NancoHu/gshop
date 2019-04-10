@@ -24,8 +24,9 @@
       </section>
 
       <section class="info_line">
-        <h2 class="info_title">收获地址</h2>
+        <h2 class="info_title">送达地址</h2>
         <div class="info_content">
+          <span>{{address.name}}</span>
           <i class="iconfont icon-jiantou1"></i>
         </div>
       </section>
@@ -68,7 +69,7 @@ import HeaderTop from "../../components/HeaderTop/HeaderTop.vue";
 
 export default {
   computed: {
-    ...mapState(["userInfo"])
+    ...mapState(["userInfo", "address"])
   },
   components: {
     HeaderTop
