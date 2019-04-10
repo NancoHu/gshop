@@ -2,9 +2,9 @@
 
 > 移动端仿照“饿了吗”外卖项目
 
-## 项目技术点
+## 项目技术栈
 
-> vue全家桶，mint-ui，swiper，better-scroll，axios，stylus.
+> vue全家桶，mint-ui，swiper，better-scroll，axios，mock.js，stylus.
 
 ## 指令
 
