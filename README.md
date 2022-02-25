@@ -21,5 +21,4 @@ npm run build
 ```
 
 ## 项目预览网址
-
- [网址](http://106.13.3.24:3020/)
+[网址](https://charles2xx.github.io/gshop/)
