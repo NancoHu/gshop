@@ -4,7 +4,7 @@ import Router from 'vue-router'
 Vue.use(Router)
 
 const Address = () => import('../pages/Address/Address.vue')
-const MSite = () => import('../pages/Msite/Msite.vue')
+const MSite = () => import('../pages/MSite/MSite.vue')
 const Search = () => import('../pages/Search/Search.vue')
 const Order = () => import('../pages/Order/Order.vue')
 const Profile = () => import('../pages/Profile/Profile.vue')

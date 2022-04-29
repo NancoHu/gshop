@@ -16,7 +16,7 @@
 </template>
 
 <script>
-import { mapState } from "Vuex";
+import { mapState } from "vuex";
 import HeaderTop from "../../components/HeaderTop/HeaderTop.vue";
 export default {
   computed: {
